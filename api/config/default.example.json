@@ -1,5 +1,9 @@
 {
     "Enviropment": "Development",
+    "Logger": {
+        "Combined": "logs/klisi.log",
+        "Error": "logs/klisi-error.log"
+    },
     "Server": {
         "Port": 443,
         "Hostname": "localhost"

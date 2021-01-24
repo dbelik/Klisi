@@ -4,6 +4,8 @@ const config = require("config");
 const path = require("path");
 const express = require("express");
 
+const logger = require("./logger");
+
 module.exports = class Server {
     constructor() {
         this.port = config.get("Server.Port");
@@ -14,7 +16,7 @@ module.exports = class Server {
 
     start() {
         this.httpsServer.listen(this.port, () => {
-            console.log(`Starting the server at https://localhost:${this.port}`);
+            logger.log(`Starting the server at https://localhost:${this.port}`);
         });
     }
 
