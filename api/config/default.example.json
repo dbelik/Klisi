@@ -9,6 +9,8 @@
         "Hostname": "localhost"
     },
     "SSL": {
+        "KeyPath": "ssl/key.pem",
+        "CertPath": "ssl/cert.pem",
         "Passphrase": "your_passphrase"
     }
 }

@@ -22,10 +22,14 @@ module.exports = class Server {
 
     // Private methods
     _createHttpsServer() {
+        const keyPath = config.get("SSL.KeyPath");
+        const certPath = config.get("SSL.CertPath");
+        const passphrase = config.get("SSL.Passphrase");
+
         return https.createServer({
-            key: fs.readFileSync(path.join(__dirname, "../ssl/key.pem")),
-            cert: fs.readFileSync(path.join(__dirname, "../ssl/cert.pem")),
-            passphrase: config.get("SSL.Passphrase")
+            key: fs.readFileSync(path.join(__dirname, "..", keyPath)),
+            cert: fs.readFileSync(path.join(__dirname, "..", certPath)),
+            passphrase: passphrase
         }, this.app);
     }
 }
