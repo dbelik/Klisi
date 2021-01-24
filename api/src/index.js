@@ -1,1 +1,7 @@
-console.log("test");
+const Server = require("./Server");
+
+initAll();
+
+function initAll() {
+    (new Server()).start();
+}

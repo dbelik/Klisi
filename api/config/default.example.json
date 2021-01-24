@@ -1,0 +1,10 @@
+{
+    "Enviropment": "Development",
+    "Server": {
+        "Port": 443,
+        "Hostname": "localhost"
+    },
+    "SSL": {
+        "Passphrase": "your_passphrase"
+    }
+}
