@@ -7,3 +7,12 @@ services:
       - ./api:/usr/src/klisi_api
     ports:
       - 443:443
+
+  web:
+    build: ./client
+    volumes:
+      - ./client:/usr/src/klisi_client
+    ports:
+      - 3000:3000
+    depends_on: 
+      - api

@@ -2,5 +2,6 @@ node_modules
 package-lock.json
 ssl
 logs
+.eslintcache
 
 */config/default.json
