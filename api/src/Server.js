@@ -14,6 +14,10 @@ module.exports = class Server {
         this.httpsServer = this._createHttpsServer();
     }
 
+    attachRouter(router) {
+        this.app.use(router);
+    }
+
     start() {
         this.httpsServer.listen(this.port, () => {
             logger.log(`Starting the server at https://localhost:${this.port}`);

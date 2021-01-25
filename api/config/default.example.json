@@ -12,5 +12,14 @@
         "KeyPath": "ssl/key.pem",
         "CertPath": "ssl/cert.pem",
         "Passphrase": "your_passphrase"
+    },
+    "Auth": {
+        "Google": {
+            "ID": "google_id",
+            "Secret": "google_secret"
+        }
+    },
+    "Database": {
+        "URL": "your_url"
     }
 }
