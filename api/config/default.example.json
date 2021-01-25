@@ -1,16 +1,16 @@
 {
     "Enviropment": "Development",
     "Logger": {
-        "Combined": "logs/klisi.log",
-        "Error": "logs/klisi-error.log"
+        "Combined": "../logs/klisi.log",
+        "Error": "../logs/klisi-error.log"
     },
     "Server": {
         "Port": 443,
         "Hostname": "localhost"
     },
     "SSL": {
-        "KeyPath": "ssl/key.pem",
-        "CertPath": "ssl/cert.pem",
+        "KeyPath": "../ssl/key.pem",
+        "CertPath": "../ssl/cert.pem",
         "Passphrase": "your_passphrase"
     },
     "Auth": {

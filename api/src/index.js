@@ -3,8 +3,8 @@ const googleStrategy = require("passport-google-oauth20");
 const config = require("config");
 const mongoose = require("mongoose");
 
-const logger = require("./logger");
-const Server = require("./Server");
+const logger = require("./utilities/logger");
+const Server = require("./utilities/Server");
 const routes = require("./routes");
 
 // Initialize server, routes, etc.

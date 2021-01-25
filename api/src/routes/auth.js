@@ -2,7 +2,7 @@ const express = require("express");
 const passport = require("passport");
 const { ExceptionHandler } = require("winston");
 
-const logger = require("../logger");
+const logger = require("../utilities/logger");
 
 const router = express.Router();
 router.get("/login/google", passport.authenticate("google", {

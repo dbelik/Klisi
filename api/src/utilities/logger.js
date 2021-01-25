@@ -1,6 +1,7 @@
 const winston = require("winston");
 const path = require("path");
 const config = require("config");
+const { format } = require("winston");
 
 class Logger {
     constructor() {
@@ -21,6 +22,7 @@ class Logger {
 
         return winston.createLogger({
             level: "debug",
+            format: winston.format.combine(format.timestamp(), format.json()),
             transports: [
                 new winston.transports.Console(),
 
