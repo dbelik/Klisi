@@ -1,6 +1,5 @@
 const express = require("express");
 const passport = require("passport");
-const { ExceptionHandler } = require("winston");
 
 const logger = require("../utilities/logger");
 
@@ -10,7 +9,7 @@ router.get("/login/google", passport.authenticate("google", {
 }));
 router.get("/login/google/callback", passport.authenticate("google"), (req, res) => {
     logger.log("Google callback function is fired");
-    res.status(200).send("here");
+    res.redirect("/");
 });
 
 module.exports = router;

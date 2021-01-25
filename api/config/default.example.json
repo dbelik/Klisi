@@ -17,6 +17,10 @@
         "Google": {
             "ID": "google_id",
             "Secret": "google_secret"
+        },
+        "Cookie": {
+            "MaxAge": 3600000,
+            "Keys": ["your_cookie_key"]
         }
     },
     "Database": {

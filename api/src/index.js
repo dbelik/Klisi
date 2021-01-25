@@ -2,7 +2,9 @@ const passport = require("passport");
 const googleStrategy = require("passport-google-oauth20");
 const config = require("config");
 const mongoose = require("mongoose");
+const cookieSession = require("cookie-session");
 
+const auth = require("./utilities/auth");
 const logger = require("./utilities/logger");
 const Server = require("./utilities/Server");
 const routes = require("./routes");
@@ -40,7 +42,18 @@ async function initDatabase() {
 
 function initServer() {
     const server = new Server();
-    server.attachRouter(routes.auth);
+
+    // Attach middlewares.
+    server.attach(cookieSession({
+        maxAge: config.get("Auth.Cookie.MaxAge"),
+        keys: config.get("Auth.Cookie.Keys")
+    }));
+    server.attach(passport.initialize());
+    server.attach(passport.session());
+    // Attach routes.
+    server.attach(routes.auth);
+    server.attach(routes.test);
+
     server.start();
 }
 
@@ -48,11 +61,14 @@ function initPassport() {
     const hostname = config.get("Server.Hostname");
     const port = config.get("Server.Port");
 
+    passport.serializeUser(auth.serialize);
+    passport.deserializeUser(auth.deserialize);
+
     passport.use(new googleStrategy({
         clientID: config.get("Auth.Google.ID"),
         clientSecret: config.get("Auth.Google.Secret"),
         callbackURL: `https://${hostname}:${port}/login/google/callback`
-    }, (access, refresh, profile, done) => {
-        user(profile.id);
+    }, async (access, refresh, profile, done) => {
+        done(null, await user.create(profile.id));
     }));
 }
