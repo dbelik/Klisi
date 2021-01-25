@@ -4,10 +4,11 @@ const config = require("config");
 const mongoose = require("mongoose");
 const cookieSession = require("cookie-session");
 
+const routes = require("./routes");
+const middlewares = require("./middlewares");
 const auth = require("./utilities/auth");
 const logger = require("./utilities/logger");
 const Server = require("./utilities/Server");
-const routes = require("./routes");
 
 const user = require("./database/user");
 
@@ -44,15 +45,21 @@ function initServer() {
     const server = new Server();
 
     // Attach middlewares.
-    server.attach(cookieSession({
+    server.attachMiddleware(cookieSession({
         maxAge: config.get("Auth.Cookie.MaxAge"),
         keys: config.get("Auth.Cookie.Keys")
     }));
-    server.attach(passport.initialize());
-    server.attach(passport.session());
-    // Attach routes.
-    server.attach(routes.auth);
-    server.attach(routes.test);
+    server.attachMiddleware(passport.initialize());
+    server.attachMiddleware(passport.session());
+
+    // Attach public routes.
+    server.attachRoutes("/", routes.login);
+
+    // Attach authentication middleware.
+    server.attachMiddleware(middlewares.auth.check);
+    // Attach private routes.
+    server.attachRoutes("/", routes.logout);
+    server.attachRoutes("/", routes.test);
 
     server.start();
 }

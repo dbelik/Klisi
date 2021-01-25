@@ -14,8 +14,12 @@ module.exports = class Server {
         this.httpsServer = this._createHttpsServer();
     }
 
-    attach(entity) {
-        this.app.use(entity);
+    attachMiddleware(middleware) {
+        this.app.use(middleware);
+    }
+
+    attachRoutes(base, routes) {
+        this.app.use(base, routes);
     }
 
     start() {
