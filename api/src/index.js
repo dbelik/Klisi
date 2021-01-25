@@ -7,6 +7,8 @@ const logger = require("./utilities/logger");
 const Server = require("./utilities/Server");
 const routes = require("./routes");
 
+const user = require("./database/user");
+
 // Initialize server, routes, etc.
 initAll();
 
@@ -24,7 +26,8 @@ async function initDatabase() {
     const dbUrl = config.get("Database.URL");
     const dbOptions = {
         useNewUrlParser: true,
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
+        useCreateIndex: true
     };
     try {
         await mongoose.connect(dbUrl, dbOptions);
@@ -50,6 +53,6 @@ function initPassport() {
         clientSecret: config.get("Auth.Google.Secret"),
         callbackURL: `https://${hostname}:${port}/login/google/callback`
     }, (access, refresh, profile, done) => {
-        console.log(profile);
+        user(profile.id);
     }));
 }
