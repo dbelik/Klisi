@@ -1,0 +1,14 @@
+{
+  "short_name": "Klisi",
+  "name": "Klisi",
+  "icons": [
+    {
+      "src": "klisi.svg",
+      "type": "image/svg"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#E53E44",
+  "background_color": "#ffffff"
+}
