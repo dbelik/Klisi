@@ -20,8 +20,8 @@ export default function Routes() {
         <Router>
             <Switch>
                 <Route exact path="/">{ Home }</Route>
-                <Route exact path="/guide">{ Guide }</Route>
-                <Route exact path="/login">{ Login }</Route>
+                <Route path="/guide">{ Guide }</Route>
+                <Route path="/login">{ Login }</Route>
 
                 <PrivateRoute path="/dashboard">{ Dashboard }</PrivateRoute>
                 <PrivateRoute path="/callroom">{ Callroom }</PrivateRoute>
