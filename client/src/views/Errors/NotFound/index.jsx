@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+
+import PageTitle from "../../../components/Common/PageTitle/";
 
 export default function NotFound() {
     return (
-        <h2>Not found</h2>
+        <Fragment>
+            <PageTitle>Sorry, nothing's here</PageTitle>
+
+            <h2>Sorry, nothing's here</h2>
+        </Fragment>
     )
 }

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
+import Routes from "../Router/Routes"
+
+import "normalize.css";
 import "./global.css";
 
 export default function App() {
   return (
-    <h1>
-      Testss
-    </h1>
+    <Fragment>
+      <Routes />
+    </Fragment>
   );
 }
