@@ -7,12 +7,13 @@ function NavbarPart(props) {
     return (
         <motion.div
             style={{
-                width: "40px",
+                width: "100%",
                 height: "5px",
-                backgroundColor: theme.primary,
+                backgroundColor: theme.secondary,
                 borderRadius: "20px",
                 position: "absolute",
-                top: "15px"
+                top: "18px",
+                left: "5px"
             }}
             {...props}
         />
@@ -24,7 +25,7 @@ export default function NavbarToggle({ toggle }) {
         <motion.button 
             onClick={toggle} 
             className="bg-transparent position-relative" 
-            style={{ border: "none", height: "36px", width: "40px" }}
+            style={{ border: "none", height: "36px", width: "30px" }}
 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

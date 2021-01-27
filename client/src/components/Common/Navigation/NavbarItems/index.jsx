@@ -5,6 +5,7 @@ import sizes from '../../../../constants/sizes';
 
 import NavbarItem from '../NavbarItem';
 import NavbarToggle from '../NavbarToggle';
+import theme from '../../../../constants/theme';
 
 const sidebar = {
     open: (height = 1000) => ({
@@ -16,9 +17,9 @@ const sidebar = {
         }
     }),
     closed: {
-        clipPath: "circle(30px at 40px 40px)",
+        clipPath: "circle(20px at 270px 42px)",
         transition: {
-            delay: 0.5,
+            delay: 0.3,
             type: "spring",
             stiffness: 400,
             damping: 40
@@ -39,7 +40,22 @@ export default function NavbarItems({ toggle }) {
             {
                 width <= sizes.screen.desktop && (
                     <Fragment>
-                        <motion.div variants={sidebar} />
+                        <motion.div
+                            initial={{...sidebar.closed, opacity: 0}}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                delay: 1
+                            }}
+                            variants={sidebar}
+                            className="position-absolute w-100"
+                            style={{
+                                background: theme.primary,
+                                height: "100vh",
+                                maxWidth: "320px",
+                                top: "0",
+                                right: "0"
+                            }} 
+                        />
                         <NavbarToggle toggle={toggle} />
                     </Fragment>
                 )
