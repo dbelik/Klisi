@@ -5,7 +5,7 @@ export default function PageTitle({ children }) {
     return (
         <HelmetProvider>
             <Helmet>
-                <title>{ children }</title>
+                <title>Klisi | { children }</title>
             </Helmet>
         </HelmetProvider>
     );

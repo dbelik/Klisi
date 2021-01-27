@@ -48,13 +48,13 @@ export default function NavbarItems({ toggle }) {
                                 delay: 1
                             }}
                             variants={sidebar}
-                            className="position-absolute w-100"
+                            className="position-absolute w-100 shadow"
                             style={{
                                 background: theme.primary,
                                 height: "100vh",
                                 maxWidth: "320px",
                                 top: "0",
-                                right: "0"
+                                right: "0",
                             }} 
                         >
                             <NavbarItemsListOpen />

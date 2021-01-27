@@ -11,13 +11,20 @@
 
 body {
     background: #17181f;
+    color: white;
     font-family: "Open Sans", sans-serif;
 }
 
-.klisi-container {
-    width: min(100%, 1200px);
-    margin: 0px auto;
-    padding: 0px 20px;
+h1, h2 {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+p {
+    font-size: 18px;
 }
 
 a {
@@ -34,4 +41,14 @@ a, a:hover, a:focus, button {
 a:hover, a:focus {
     color: #17181F;
     background-color: #e53e44;
+}
+
+.klisi-container {
+    width: min(100%, 1200px);
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+
+.shadow {
+    box-shadow: "0 0 7px rgba(0, 0, 0, .1)";
 }

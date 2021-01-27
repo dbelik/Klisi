@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import PageTitle from '../../components/Common/PageTitle';
+import PageTitle from '../../components/Misc/PageTitle';
 
 export default function Login() {
     return (
