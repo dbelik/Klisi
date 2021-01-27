@@ -1,6 +1,6 @@
 export default {
     "primary": "#e53e44",
-    "secondary": "#393b4a",
+    "secondary": "#17181f",
     
-    "text": "#393b4a",
+    "text": "#17181f",
 };

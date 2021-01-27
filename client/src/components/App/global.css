@@ -3,3 +3,19 @@
     padding: 0px;
     margin: 0px;
 }
+
+*::selection {
+    background: #e53e44;
+    color: white;
+}
+
+body {
+    background: #17181f;
+    font-family: "Open Sans", sans-serif;
+}
+
+.klisi-container {
+    width: min(100%, 1200px);
+    margin: 0px auto;
+    padding: 0px 20px;
+}
