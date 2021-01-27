@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 import theme from '../../../../constants/theme';
 
 export default function Link({ children, href }) {
-    const [hover, setHover] = useState(false);
-
     return (
         <motion.a
             className="position-relative"

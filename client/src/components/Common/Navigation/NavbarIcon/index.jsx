@@ -33,7 +33,7 @@ export default function Navbar({ delay }) {
 
     return (
         <motion.svg 
-            style={{ height: "40px" }} width="86" height="56" viewBox="0 0 86 56"
+            style={{ height: "40px" }} width="65" height="56" viewBox="0 0 86 56"
             {...animationProp}
             transition={{
                 delay: delay
