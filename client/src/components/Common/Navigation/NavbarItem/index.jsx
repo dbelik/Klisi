@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-export default function NavbarItem({ children, href, delay }) {
+export default function NavbarItem({ children, href, delay, style, linkStyle, className }) {
     return (
         <motion.li 
             initial={{ opacity: 0 }} 
@@ -10,9 +10,10 @@ export default function NavbarItem({ children, href, delay }) {
                 delay: delay
             }}
 
-            className="mr-4"
+            style={style}
+            className={className}
         >
-            <a href={href}>{ children }</a>
+            <a href={href} style={linkStyle}>{ children }</a>
         </motion.li>
     )
 }

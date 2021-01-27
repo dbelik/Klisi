@@ -3,8 +3,9 @@ import { motion } from 'framer-motion';
 
 import sizes from '../../../../constants/sizes';
 
-import NavbarItem from '../NavbarItem';
 import NavbarToggle from '../NavbarToggle';
+import NavbarItemsList from '../NavbarItemsList';
+import NavbarItemsListOpen from '../NavbarItemsListOpen';
 import theme from '../../../../constants/theme';
 
 const sidebar = {
@@ -55,21 +56,16 @@ export default function NavbarItems({ toggle }) {
                                 top: "0",
                                 right: "0"
                             }} 
-                        />
+                        >
+                            <NavbarItemsListOpen />
+                        </motion.div>
+
                         <NavbarToggle toggle={toggle} />
                     </Fragment>
                 )
             }
 
-            {
-                width > sizes.screen.desktop && (
-                    <ul className="list-unstyled d-flex m-0">
-                        <NavbarItem href="/home" delay={1}>Home</NavbarItem>
-                        <NavbarItem href="/about" delay={1.05}>About</NavbarItem>
-                        <NavbarItem href="/login" delay={1.1}>Log in</NavbarItem>
-                    </ul>
-                )
-            }
+            { width > sizes.screen.desktop && <NavbarItemsList /> }
         </Fragment>
     )
 }

@@ -24,7 +24,7 @@ a {
     color: #e53e44;
 }
 
-a, a:hover, a:focus {
+a, a:hover, a:focus, button {
     text-decoration: none;
     outline: none;
     border: none;
