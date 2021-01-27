@@ -19,3 +19,19 @@ body {
     margin: 0px auto;
     padding: 0px 20px;
 }
+
+a {
+    color: #e53e44;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: background-color .2s, color .2s;
+}
+
+a:hover, a:focus {
+    color: #17181F;
+    background-color: #e53e44;
+}

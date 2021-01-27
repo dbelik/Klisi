@@ -8,10 +8,11 @@ function NavbarPart(props) {
         <motion.div
             style={{
                 width: "40px",
-                height: "6px",
+                height: "5px",
                 backgroundColor: theme.primary,
                 borderRadius: "20px",
-                position: "absolute"
+                position: "absolute",
+                top: "15px"
             }}
             {...props}
         />
@@ -20,19 +21,27 @@ function NavbarPart(props) {
 
 export default function NavbarToggle({ toggle }) {
     return (
-        <button onClick={toggle} className="bg-transparent position-relative" style={{ border: "none", height: "36px", width: "40px" }}>
+        <motion.button 
+            onClick={toggle} 
+            className="bg-transparent position-relative" 
+            style={{ border: "none", height: "36px", width: "40px" }}
+
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+        >
             <NavbarPart
                 variants={{
-                    closed: { transform: "rotate(0deg)", top: "10px" },
-                    open: { transform: "rotate(45deg)", top: "15px" }
+                    closed: { transform: "rotate(0deg)" },
+                    open: { transform: "rotate(45deg)" }
                 }}
             />
             <NavbarPart
                 variants={{
-                    closed: { transform: "rotate(0deg)", top: "20px" },
-                    open: { transform: "rotate(-45deg)", top: "15px" }
+                    closed: { transform: "rotate(0deg)" },
+                    open: { transform: "rotate(-45deg)" }
                 }}
             />
-        </button>
+        </motion.button>
     )
 }
