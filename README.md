@@ -1,4 +1,4 @@
-![Klisi logo]("./assets/klisi-logo.svg" "Klisi")
+![Klisi logo](./assets/klisi-logo.svg "Klisi")
 
 # Klisi
 Klisi is a video communication tool that lets users to make video calls.
