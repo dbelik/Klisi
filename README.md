@@ -1,4 +1,6 @@
-![Klisi logo](./assets/klisi-logo.svg "Klisi")
+<p align="center">
+  <img src="./assets/klisi-logo.svg" alt="Klisi" height="100px" title="Klisi" />
+</p>
 
 # Klisi
 Klisi is a video communication tool that lets users to make video calls.
@@ -15,7 +17,7 @@ So far, Klisi API only supports OAuth2 authorization and yet not implemented Web
 Once it's implemented, you can expect API documentation (OpenAPI 3) in ./docs folder. 
 
 ## Credits
-Thanks to all website designers who inspired Klisi design.
+Thanks to all website designers who has inspired Klisi design.
 You can find list of these websites in [./docs/design.md](./docs/design.md).
 
 ## License
