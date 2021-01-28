@@ -59,7 +59,7 @@ a:hover, a:focus {
     background-color: #e53e44;
 }
 
-svg, img {
+svg, img, video {
     max-width: 100%
 }
 
