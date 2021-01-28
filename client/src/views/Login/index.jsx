@@ -1,13 +1,19 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
-import PageTitle from '../../components/Misc/PageTitle';
+import sizes from '../../constants/sizes';
+
+import DefaultLayout from "../../components/Layouts/Default";
 
 export default function Login() {
     return (
-        <Fragment>
-            <PageTitle>Log in</PageTitle>
+        <DefaultLayout title="Log in">
+            <div className="klisi-container d-flex flex-column align-items-center justify-content-center h-100vh" style={{ marginTop: -sizes.navbar }}>
+                <h2>You can "Log in" using:</h2>
 
-            <h2>Log in</h2>
-        </Fragment>
+                <ul className="list-unstyled m-0">
+                    <li><h3><a href="#">Gmail</a></h3></li>
+                </ul>
+            </div>
+        </DefaultLayout>
     );
 }

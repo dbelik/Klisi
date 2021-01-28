@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 
+import sizes from '../../../constants/sizes';
+
 import PageTitle from '../../Misc/PageTitle';
 import Navbar from "../../Misc/Navigation/Navbar";
 
@@ -10,7 +12,7 @@ export default function DefaultLayout({ title, children }) {
 
             <Navbar />
 
-            <main>
+            <main className="h-100 w-100" style={{ paddingTop: sizes.navbar }}>
                 {children}
             </main>
         </Fragment>

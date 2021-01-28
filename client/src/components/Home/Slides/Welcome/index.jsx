@@ -1,12 +1,14 @@
 import React from 'react';
 
+import sizes from '../../../../constants/sizes';
+
 import HomeEye from '../../HomeEye';
 
 export default function Welcome() {
     return (
         <section 
             className="klisi-container"
-            style={{ height: "100vh" }}
+            style={{ height: "100vh", marginTop: -sizes.navbar }}
         >
             <div className="d-flex flex-column flex-lg-row flex-wrap align-items-center justify-content-center w-100 h-100">
                 <div className="col-lg-6 pl-3 pr-3 pr-lg-5 text-center text-lg-left">

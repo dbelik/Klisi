@@ -13,7 +13,7 @@ function NavbarPart(props) {
                 borderRadius: "20px",
                 position: "absolute",
                 top: "18px",
-                left: "5px"
+                left: "7px"
             }}
             {...props}
         />
