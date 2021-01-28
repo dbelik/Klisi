@@ -1,22 +1,17 @@
-import React, { Fragment } from 'react';
-
-import PageTitle from '../../components/Misc/PageTitle';
-import Navbar from "../../components/Misc/Navigation/Navbar";
+import React from 'react';
 
 import WelcomeSlide from "../../components/Home/Slides/Welcome";
 import PresentationSlide from "../../components/Home/Slides/Presentation";
 import FooterSlide from "../../components/Home/Slides/Footer";
 
+import DefaultLayout from "../../components/Layouts/Default";
+
 export default function Home() {
     return (
-        <Fragment>
-            <PageTitle>Welcome</PageTitle>
-
-            <Navbar />
-
+        <DefaultLayout title="Welcome">
             <WelcomeSlide />
             <PresentationSlide />
             <FooterSlide />
-        </Fragment>
+        </DefaultLayout>
     )
 }
