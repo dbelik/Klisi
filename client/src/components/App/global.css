@@ -4,11 +4,27 @@
     margin: 0px;
 }
 
+/* Content selection styles. */
 *::selection {
     background: #e53e44;
     color: white;
 }
 
+/* Scroll styles. */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #17181F;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e53e44;
+    border-radius: 20px;
+}
+
+/* Tag overloads. */
 body {
     background: #17181f;
     color: white;
@@ -43,6 +59,11 @@ a:hover, a:focus {
     background-color: #e53e44;
 }
 
+svg, img {
+    max-width: 100%
+}
+
+/* Utility classes. */
 .klisi-container {
     width: min(100%, 1200px);
     margin: 0px auto;
@@ -50,5 +71,5 @@ a:hover, a:focus {
 }
 
 .shadow {
-    box-shadow: "0 0 7px rgba(0, 0, 0, .1)";
+    box-shadow: 0 0 7px rgba(0, 0, 0, .1);
 }
