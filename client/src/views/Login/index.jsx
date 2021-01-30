@@ -1,15 +1,22 @@
 import React from 'react';
+import axios from 'axios';
 
 import sizes from '../../config/sizes';
 import api from '../../config/api';
 
 import UrlJoin from '../../utilities/UrlJoin';
+import ErrorCatcher from '../../utilities/ErrorCatcher';
 
 import DefaultLayout from "../../components/Layouts/Default";
 import LinkButton from "../../components/Buttons/Link";
 
+async function authorize(url) {
+    window.open(url, "_self");
+}
+
 function authorizeVia(provider) {
-    alert(new UrlJoin(api.base, ["login", provider]).join());
+    const url = new UrlJoin(api.base, ["login", provider]).join();
+    new ErrorCatcher().call(() => authorize(url), (error) => console.error(error));
 }
 
 export default function Login() {

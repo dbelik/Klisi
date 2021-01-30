@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
 
-import Routes from "../Router/Routes"
+import Routes from "../Misc/Router/Routes"
 
 import "normalize.css";
 import 'bootstrap/dist/css/bootstrap.css';

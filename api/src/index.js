@@ -1,8 +1,9 @@
 const passport = require("passport");
-const googleStrategy = require("passport-google-oauth20");
+const googleStrategy = require("passport-google-oauth20").Strategy;
 const config = require("config");
 const mongoose = require("mongoose");
 const cookieSession = require("cookie-session");
+const cors = require("cors");
 
 const routes = require("./routes");
 const middlewares = require("./middlewares");
@@ -45,6 +46,7 @@ function initServer() {
     const server = new Server();
 
     // Attach middlewares.
+    server.attachMiddleware(cors());
     server.attachMiddleware(cookieSession({
         maxAge: config.get("Auth.Cookie.MaxAge"),
         keys: config.get("Auth.Cookie.Keys")
@@ -54,12 +56,12 @@ function initServer() {
 
     // Attach public routes.
     server.attachRoutes("/", routes.login);
+    server.attachRoutes("/", routes.test);
 
     // Attach authentication middleware.
     server.attachMiddleware(middlewares.auth.check);
     // Attach private routes.
     server.attachRoutes("/", routes.logout);
-    server.attachRoutes("/", routes.test);
 
     server.start();
 }

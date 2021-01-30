@@ -1,12 +1,10 @@
 import React from 'react';
 
-import theme from '../../../../config/theme';
-
 import NavbarItem from '../NavbarItem';
 
 export default function NavbarItemsListOpen() {
     const linkStyle = {
-        color: theme.secondary,
+        color: "white",
         display: "block",
         padding: "10px"
     };

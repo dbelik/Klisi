@@ -4,6 +4,9 @@
         "Combined": "../logs/klisi.log",
         "Error": "../logs/klisi-error.log"
     },
+    "Client": {
+        "Base": "client_base"
+    },
     "Server": {
         "Port": 443,
         "Hostname": "localhost"

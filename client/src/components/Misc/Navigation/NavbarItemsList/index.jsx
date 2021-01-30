@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-import CookieChecker from '../../../../utilities/CookieChecker';
+import UserProvider from '../../../Context/User';
 
 import NavbarItem from '../NavbarItem';
 
 export default function NavbarItemsList() {
-    const cookie = (new CookieChecker()).exists();
+    const user = useContext(UserProvider.context);
 
     return (
         <ul className="list-unstyled d-flex m-0">

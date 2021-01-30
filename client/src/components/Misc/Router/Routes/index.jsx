@@ -4,16 +4,16 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivateRoute from '../PrivateRoute/';
 
 // Public routes.
-import Home from "../../../views/Home";
-import Guide from "../../../views/Guide";
-import Login from "../../../views/Login";
+import Home from "../../../../views/Home";
+import Guide from "../../../../views/Guide";
+import Login from "../../../../views/Login";
 
 // Private routes.
-import Dashboard from "../../../views/Dashboard";
-import Callroom from "../../../views/Callroom";
+import Dashboard from "../../../../views/Dashboard";
+import Callroom from "../../../../views/Callroom";
 
 // Error routes.
-import NotFound from "../../../views/Errors/NotFound";
+import NotFound from "../../../../views/Errors/NotFound";
 
 export default function Routes() {
     return (
