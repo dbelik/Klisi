@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import theme from "../../../../constants/theme";
+import theme from "../../../../config/theme";
 
 function NavbarPart(props) {
     return (

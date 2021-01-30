@@ -1,6 +1,6 @@
 import React from 'react';
 
-import sizes from '../../../../constants/sizes';
+import sizes from '../../../../config/sizes';
 
 import HomeEye from '../../HomeEye';
 

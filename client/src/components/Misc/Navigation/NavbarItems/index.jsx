@@ -1,12 +1,12 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-import sizes from '../../../../constants/sizes';
+import sizes from '../../../../config/sizes';
 
 import NavbarToggle from '../NavbarToggle';
 import NavbarItemsList from '../NavbarItemsList';
 import NavbarItemsListOpen from '../NavbarItemsListOpen';
-import theme from '../../../../constants/theme';
+import theme from '../../../../config/theme';
 
 const sidebar = {
     open: (height = 1000) => ({

@@ -1,16 +1,14 @@
 version: "3"
 
 services:
-  api:
+  klisi-api:
     build: ./api
-    environment:
-      CHOKIDAR_USEPOLLING: "true"
     volumes:
       - ./api:/usr/src/klisi_api
     ports:
       - 443:443
 
-  web:
+  klisi-web:
     build: ./client
     environment:
       CHOKIDAR_USEPOLLING: "true"
@@ -18,3 +16,5 @@ services:
       - ./client:/usr/src/klisi_client
     ports:
       - 3000:3000
+    depends_on: 
+      - klisi-api

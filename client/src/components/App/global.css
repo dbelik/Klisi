@@ -56,7 +56,7 @@ a, a:hover, a:focus, button {
 }
 
 a:hover, a:focus {
-    color: #17181F;
+    color: white;
     background-color: #e53e44;
 }
 

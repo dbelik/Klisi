@@ -5,7 +5,8 @@ const logger = require("../utilities/logger");
 
 const router = express.Router();
 router.get("/test", (req, res) => {
-    res.send("You are qualified")
+    logger.log("Hit testing route");
+    res.send("You are qualified");
 });
 
 module.exports = router;

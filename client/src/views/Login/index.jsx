@@ -1,8 +1,16 @@
 import React from 'react';
 
-import sizes from '../../constants/sizes';
+import sizes from '../../config/sizes';
+import api from '../../config/api';
+
+import UrlJoin from '../../utilities/UrlJoin';
 
 import DefaultLayout from "../../components/Layouts/Default";
+import LinkButton from "../../components/Buttons/Link";
+
+function authorizeVia(provider) {
+    alert(new UrlJoin(api.base, ["login", provider]).join());
+}
 
 export default function Login() {
     return (
@@ -11,7 +19,7 @@ export default function Login() {
                 <h2>You can "Log in" using:</h2>
 
                 <ul className="list-unstyled m-0">
-                    <li><h3><a href="#">Gmail</a></h3></li>
+                    <li><h3><LinkButton onClick={() => authorizeVia("google")}>Gmail</LinkButton></h3></li>
                 </ul>
             </div>
         </DefaultLayout>

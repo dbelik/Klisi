@@ -1,6 +1,6 @@
 import React from 'react';
 
-import theme from '../../../../constants/theme';
+import theme from '../../../../config/theme';
 
 import Video from "../../../Videos/Video";
 

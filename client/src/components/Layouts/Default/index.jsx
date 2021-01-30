@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import sizes from '../../../constants/sizes';
+import sizes from '../../../config/sizes';
 
 import PageTitle from '../../Misc/PageTitle';
 import Navbar from "../../Misc/Navigation/Navbar";
